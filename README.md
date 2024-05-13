@@ -10,8 +10,10 @@ How to Run the App
    Activate the virtual environment using the following command:
     venv\Scripts\activate
 4. Build the Database: Execute the following commands in the terminal:
+   
     python manage.py makemigrations
    
     python manage.py migrate
 6. Run the Server: Start the server by running the command:
+   
     python manage.py runserver
