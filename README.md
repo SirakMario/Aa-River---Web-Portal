@@ -9,7 +9,7 @@ How to Run the App
 2. Install virtualenv:
 
    pip install virtualenv
-3. Navigate to project ' UAV_Project ' in your terminal and create a Virtual Environment
+3. Navigate to project `UAV_Project` in your terminal and create a Virtual Environment
 
    virtualenv venv
 4. Activate Virtual Environment: Open your terminal and direct it to the project directory `UAV_Project`.
