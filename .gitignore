@@ -1,0 +1,5 @@
+# Ignore virtual environment directories
+venv/
+
+# Ignore uploaded images
+media/images_to/
