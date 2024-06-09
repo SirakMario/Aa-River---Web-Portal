@@ -1,39 +1,18 @@
+{% load static %}
 <html lang="en" data-bs-theme="light">
   <head>
     <style data-emotion="css" data-s=""></style>
-    <script src="https://getbootstrap.com/site/static/docs/5.3/assets/js/color-modes.js"></script>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>UAV Project</title>
     
     <!-- leaflet cdn link -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    />
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-      }
-      #map {
-        height: 500;
-        width: 500;
-      }
-    </style>
-
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="{% static 'css/leaflet-measure.css'%}">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
-
-    
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-        <!-- Favicons -->
+            <!-- Favicons -->
     <link rel="apple-touch-icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
     <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
     <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -44,6 +23,15 @@
 
 
     <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 500;
+        width: 500;
+      }
+
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -144,32 +132,32 @@
         }
     }
   
-  .qEYyC4J5veWyiLaz9gNP {
-	  display: inline-flex;
-	  flex-wrap: nowrap;
-	  align-items: center;
-	  justify-content: center;
-	  transition: none;
-	  position: relative;
-	  overflow: hidden;
-	  transform: translate3d(0, 0, 0);
-	  vertical-align: baseline;
-	  margin-bottom: 5.58px;
-	  padding: 3px 18px;
-	  font-family: "regular-clarivate","Helvetica Neue",Helvetica,Arial,sans-serif;
-	  font-weight: 400;
-	  line-height: 1.5;
-	  text-align: center;
-	  cursor: pointer;
-	  letter-spacing: 0.01em;
-	  text-decoration: none;
-	  background-image: none;
-	  border-radius: 1.5rem;
-	  border: 1px solid #646363;
-	  background-color: #fff;
-	  box-shadow: 0 0 0 1px transparent;
-	  color: #000;
-	  transition: box-shadow ease-in-out .1s,background-color ease-in-out .1s;
+    .qEYyC4J5veWyiLaz9gNP {
+      display: inline-flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
+      transition: none;
+      position: relative;
+      overflow: hidden;
+      transform: translate3d(0, 0, 0);
+      vertical-align: baseline;
+      margin-bottom: 5.58px;
+      padding: 3px 18px;
+      font-family: "regular-clarivate","Helvetica Neue",Helvetica,Arial,sans-serif;
+      font-weight: 400;
+      line-height: 1.5;
+      text-align: center;
+      cursor: pointer;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      background-image: none;
+      border-radius: 1.5rem;
+      border: 1px solid #646363;
+      background-color: #fff;
+      box-shadow: 0 0 0 1px transparent;
+      color: #000;
+      transition: box-shadow ease-in-out .1s,background-color ease-in-out .1s;
   }
   
   .qEYyC4J5veWyiLaz9gNP svg {
@@ -463,7 +451,8 @@
 
   .ZD1LzV_5hhnbdBzBCTeC {
     z-index: 65536;
-  }</style><style>.Yhs0neJe89LIyfkAJoxK {
+  }
+</style><style>.Yhs0neJe89LIyfkAJoxK {
   overflow: visible;
 }
 
@@ -807,8 +796,8 @@
     .PutPRtxMCwBXTIlJ1ERX{transition:transform .2s ease-in;transform:translateX(0)}
     .MZZI6CipqCZYqNKOU41z{display:none;position:absolute;width:20px;height:20px !important;color:#111;background-color:#f0f0eb;border:1px solid #111;border-radius:20px;line-height:20px;font-size:16px;top:0;right:0;z-index:4000;cursor:pointer}
     .MZZI6CipqCZYqNKOU41z:hover{display:block}
-    .BYG4Q2WQqiz9_B9pi8bI{position:relative;left:-1px;top:-2px}
-
+    .BYG4Q2WQqiz9_B9pi8bI{position:relative;left:-1px;top:-2px
+    }
 </style>
 <style>
     .g2yPL5PuP5YcxDAm6OHT {
@@ -2157,34 +2146,10 @@ div#vp-selection-overlay {
 
     
 
-    
-    <header data-bs-theme="dark">
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <div class="container-fluid">
-        <a class="navbar-brand" href="#">Carousel</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-            </li>
-            </ul>
-            <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-        </div>
-        </div>
-    </nav>
-    </header>
+    <!--Nav bar -->
+    {% include 'partials/_navbar.html'%}
 
     <main>
-
     <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
         <div class="carousel-indicators">
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
@@ -2271,7 +2236,7 @@ div#vp-selection-overlay {
 
         <div class="row featurette">
         <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1">Multispectral Images</h2>
+            <h2 class="featurette-heading fw-normal lh-1">{{image.image_type}}</h2>
             {% if image.description_multi_spect %}
               <p class="lead">{{image.description_multi_spect}}</p>
             {% else %}
@@ -2289,9 +2254,7 @@ div#vp-selection-overlay {
         <div class="row featurette">
         <div class="col-md-7 order-md-2">
             <h2 class="featurette-heading fw-normal lh-1">NDVI</h2>
-              <p class="lead">No description avaliable</p>
-              <p class="lead">You Don't have Description.</p>
-            {% endif %}
+              <p class="lead">No Content</p>
         </div>
         <div class="col-md-5 order-md-1">
             <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
@@ -2316,39 +2279,30 @@ div#vp-selection-overlay {
 
     </div><!-- /.container -->
 
-
-    <!-- FOOTER -->
-    <footer class="container">
-        <p class="float-end"><a href="#">Back to top</a></p>
-        <p>© 2017–2024 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
-    </footer>
-    </main>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-    
     <div id="compose-ai-general-snackbar-root"></div>
     <div id="Chat-Plugin-Root" class="compose-root-component"></div>
 
-    <script>
-      // Map initialization
-      var map = L.map("map").setView([15.1794,39.7823], 7);
+    <!-- FOOTER -->
+    {% include 'partials/_footer.html'%}
+    </main>
 
-      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      }).addTo(map);
+    <button onclick=fullScreenView()>View in Full screen</button>
+    <div class="coordinate"></div>
+    <button class="zoom-to-layer">Zoom to layer</button>
 
-      //WMS leaflet
-      var wmsLayer = L.tileLayer.wms('http://localhost:8080/geoserver/TEST/wms?', {
-        layers: 'shaded_dem',
-        formate: 'image/tif',
-        transparent: true, // If your WMS supports transparency
-      }).addTo(map);
-      // Set opacity to 0.5 (50%)
-      wmsLayer.setOpacity(0.5);
 
-    
-    </script>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://getbootstrap.com/site/static/docs/5.3/assets/js/color-modes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- jquery link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Leaflet geoserver request link -->
+    <script src="{% static 'lib/L.Geoserver.js'%}"></script>
+    <script src="{% static 'lib/leaflet.browser.print.min.js'%}"></script>
+    <script src="{% static 'lib/leaflet-measure.js'%}"></script>
+    <script src="{% static 'js/main.js'%}"></script>
+    <script src="{% static 'js/web-GIS.js'%}"></script>
 </body>
   <grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
 </html>

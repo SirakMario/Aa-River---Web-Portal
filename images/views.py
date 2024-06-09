@@ -3,7 +3,8 @@ from .models import Images
 
 # Create your views here.
 def index(request):
-    images = Images.objects.first()   #images =  Images.objects.first().image.url
+    images = Images.objects.last()   #images =  Images.objects.first().image.url
+       
     context = {
         "image" : images,
     }
