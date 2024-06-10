@@ -18,7 +18,7 @@ var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest
 });
 
 // Adding map scale
-L.control.scale({position: 'bottomright'}).addTo(map)
+L.control.scale().addTo(map)
 
 
 
