@@ -9,3 +9,6 @@ def index(request):
         "image" : images,
     }
     return render (request, "base.html", context)
+
+def products3d(request):
+    return render(request, "products3d.html")
