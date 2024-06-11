@@ -46,8 +46,9 @@
     <style>
       .pcd-container {
         position: absolute;
-        width: 500px;
-        height: 500px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
       }
 
       .slider {
@@ -95,23 +96,26 @@
 
     <!--Nav bar -->
     {% include 'partials/_navbar.html'%}
-      <main>
-        <div
-        class="pcd-container
-        width="500px"
-        height="500px">
+    <main>
+      <div class="pcd-container">
         <div class="slider"></div>
       </div>
-      <input type="hidden" id="pcd2018-src" value="{% static 'js/odm_georeferenced_model_subsampled.pcd' %}">
-      <input type="hidden" id="pcd2024-src" value="{% static 'js/cloud8786d920b00cdd1a_subsampled.pcd' %}">
+      <input
+        type="hidden"
+        id="pcd2018-src"
+        value="{% static 'js/odm_georeferenced_model_subsampled.pcd' %}"
+      />
+      <input
+        type="hidden"
+        id="pcd2024-src"
+        value="{% static 'js/cloud8786d920b00cdd1a_subsampled.pcd' %}"
+      />
       <script type="module" src="{%static 'js/pointcloud.js'%}"></script>
 
       <!-- FOOTER -->
       {% include 'partials/_footer.html'%}
     </main>
 
-
-    
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://getbootstrap.com/site/static/docs/5.3/assets/js/color-modes.js"></script>
     <script
