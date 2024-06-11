@@ -1,4 +1,4 @@
-#map {
+#map1 {
     height: 500;
     width: 500;
   }
@@ -10,7 +10,7 @@
     padding: 8px;
 }
 .full-screen {
-  margin-top: 5px;
+    margin-top: 5px;
     padding: 5px;
     background-color: white;
     position: absolute;

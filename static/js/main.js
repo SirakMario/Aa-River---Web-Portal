@@ -1,16 +1,14 @@
-// Map initialization
-var map = L.map("map").setView([51.944754,7.572074], 17);
-map.zoomControl.setPosition('topright');
+// Map initialization (For The First Map)
+var map1 = L.map("map1").setView([51.944754,7.572074], 17);
+map1.zoomControl.setPosition('topright');
 
 var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+}).addTo(map1);
 
-var Stadia_StamenTonerLite = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_toner_lite/{z}/{x}/{y}{r}.{ext}', {
-  minZoom: 0,
-  maxZoom: 20,
-  attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-  ext: 'png'
+// Map coordinate
+map1.on ("mousemove", function (e) {
+  $('.coordinate').html(`Lat: ${e.latlng.lat} Lng: ${e.latlng.lng}`)
 });
 
 var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
@@ -18,20 +16,14 @@ var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest
 });
 
 // Adding map scale
-L.control.scale().addTo(map)
+L.control.scale().addTo(map1)
 
-
-
-// Map coordinate
-map.on ("mousemove", function (e) {
-  $('.coordinate').html(`Lat: ${e.latlng.lat} Lng: ${e.latlng.lng}`)
-});
 
 
 var wmsLayer = L.Geoserver.wms('http://localhost:8080/geoserver/TEST/wms',{
   layers:'NDVI',
 });
-wmsLayer.addTo(map);
+wmsLayer.addTo(map1);
 
 //Leaflet layer control
 var baseMap = {
@@ -43,6 +35,23 @@ var overlayerMaps = {
   'NDVI': wmsLayer,
 }
 
-L.control.layers(baseMap, overlayerMaps).addTo(map);
+L.control.layers(baseMap, overlayerMaps).addTo(map1);
 
 
+/////////////////////////////////////////////////////////
+// Map initialization (Second map)
+var map2 = L.map("map2").setView([51.944754,7.572074], 17);
+
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map2);
+
+/////////////////////////////////////////////////////////
+// Map initialization (Third map)
+var map3 = L.map("map3").setView([51.944754,7.572074], 17);
+
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map3);
