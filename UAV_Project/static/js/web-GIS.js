@@ -29,7 +29,7 @@ L.control.browserPrint({position: 'topright' }).addTo(map1);
 
 ////////////////////// Map2 ///////////////////////////////
 // zoom to layer
-$('.zoom-to-layer').click(function(){
+/* $('.zoom-to-layer').click(function(){
   map2.setView([51.944754,7.572074], 17)
 })
 
@@ -56,3 +56,4 @@ L.control.measure({
 
 // Map print
 L.control.browserPrint({position: 'topright' }).addTo(map2);
+ */
