@@ -8,11 +8,12 @@ class Images(models.Model):
         ("Multispectral","Multispectral"),
         ("NDVI","NDVI"),
         ("Lidar","Lidar"),
+        ("Change Detection", "Change Detection"),
     )
     
     name = models.CharField (max_length=100, blank=False)
     date = models.DateField(default= datetime.now)
-    image_type = models.CharField (choices=image_choice)
+    image_type = models.CharField (max_length= 20, choices=image_choice)
     description_multi_spect = models.TextField (blank=True)
     
     

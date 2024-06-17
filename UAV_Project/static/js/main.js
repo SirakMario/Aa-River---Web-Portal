@@ -134,15 +134,20 @@ L.control.scale().addTo(map3)
 
 
 //http://localhost:8080/geoserver/TEST/wms
-var wmsLayer_RGB_2024 = L.Geoserver.wms('http://localhost:8080/geoserver/TEST/wms',{
-  layers:'NDVI',
+var Change_detect = L.Geoserver.wms('http://localhost:8080/geoserver/UAV_Project/wms',{
+  layers:'Change_detect',
 });
-wmsLayer_RGB_2024.addTo(map3);
+Change_detect.addTo(map3);
 
-var wmsLayer_RGB_2023 = L.Geoserver.wms ('http://localhost:8080/geoserver/TEST/wms',{
-  layers: 'NDVI',
+var DTM_2024 = L.Geoserver.wms('http://localhost:8080/geoserver/UAV_Project/wms',{
+  layers:'DTM_2024',
 });
-wmsLayer_RGB_2023.addTo(map3);
+DTM_2024.addTo(map3);
+
+var DTM_2022 = L.Geoserver.wms ('http://localhost:8080/geoserver/UAV_Project/wms',{
+  layers: 'DTM_2022',
+});
+DTM_2022.addTo(map3);
 
 //Leaflet layer control
 var baseMap = {
@@ -151,9 +156,10 @@ var baseMap = {
 }
 
 var overlayerMaps = {
-  'RGB_2024': wmsLayer_RGB_2024,
-  'RGB_2023': wmsLayer_RGB_2023,
+  'Change Detection' : Change_detect,
+  'DTM 2024': DTM_2024,
+  'DTM 2022': DTM_2022,
 }
 
 L.control.layers(baseMap, overlayerMaps).addTo(map3);
-L.control.sideBySide(wmsLayer_RGB_2024, wmsLayer_RGB_2023).addTo(map3);
+L.control.sideBySide(DTM_2022, DTM_2022).addTo(map3);
