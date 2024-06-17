@@ -11,14 +11,14 @@ const deg_to_rad = (deg) => (deg * Math.PI) / 180.0;
 
 let container, camera, renderer, controls;
 let sceneL, sceneR;
-let sliderPos = window.innerWidth / 2;
+let sliderPos;
 const url2018 = document.getElementById("pcd2018-src").value;
 const url2024 = document.getElementById("pcd2024-src").value;
-const loader = new PCDLoader();
 init();
 
 function init() {
   container = document.querySelector(".pcd-container");
+  sliderPos = container.clientWidth / 2;
 
   sceneL = new THREE.Scene();
   sceneL.background = new THREE.Color(0xbcd48f);
@@ -28,7 +28,7 @@ function init() {
 
   camera = new THREE.PerspectiveCamera(
     50, // fov gives a fish eye effect
-    window.innerWidth / window.innerHeight,
+    container.clientWidth / container.clientHeight,
     0.1,
     2000
   );
@@ -36,8 +36,8 @@ function init() {
   camera.position.set(0, 0, 300);
 
   renderer = new THREE.WebGLRenderer({ antialias: true });
-  renderer.setPixelRatio(window.devicePixelRatio);
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setPixelRatio(container.devicePixelRatio);
+  renderer.setSize(container.clientWidth, container.clientHeight);
   renderer.setScissorTest(true);
   renderer.setAnimationLoop(animate);
   container.appendChild(renderer.domElement);
@@ -48,6 +48,7 @@ function init() {
   initSlider();
   initMeshes();
 
+  container.addEventListener("resize", onWindowResize);
   window.addEventListener("resize", onWindowResize);
 }
 
@@ -73,7 +74,11 @@ function initSlider() {
   function onPointerMove(e) {
     if (event.isPrimary === false) return;
 
-    sliderPos = Math.max(0, Math.min(window.innerWidth, e.pageX));
+    // Check if pointer position (pageX) is inside the container
+    // sliderPos = Math.max(0, Math.min(window.innerWidth, e.pageX));
+    const leftContainer = container.offsetLeft;
+    const rightContainer = container.clientWidth + container.offsetLeft;
+    sliderPos = Math.max(0, Math.min(rightContainer, e.pageX) - leftContainer);
 
     slider.style.left = sliderPos - slider.offsetWidth / 2 + "px";
   }
@@ -129,16 +134,21 @@ function initMeshes() {
 }
 
 function onWindowResize() {
-  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.aspect = container.clientWidth / container.clientHeight;
   camera.updateProjectionMatrix();
 
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setSize(container.clientWidth, container.clientHeight);
 }
 
 function animate() {
-  renderer.setScissor(0, 0, sliderPos, window.innerHeight);
+  renderer.setScissor(0, 0, sliderPos, container.clientHeight);
   renderer.render(sceneL, camera);
 
-  renderer.setScissor(sliderPos, 0, window.innerWidth, window.innerHeight);
+  renderer.setScissor(
+    sliderPos,
+    0,
+    container.clientWidth,
+    container.clientHeight
+  );
   renderer.render(sceneR, camera);
 }
