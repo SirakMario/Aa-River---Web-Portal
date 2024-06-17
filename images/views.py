@@ -3,10 +3,11 @@ from .models import Images
 
 # Create your views here.
 def index(request):
-    images = Images.objects.all().first   #images =  Images.objects.first().image.url
-       
+    images_RGB = Images.objects.all() [0]   #images =  Images.objects.first().image.url
+    image_Multispectral = Images.objects.all()[1]
     context = {
-        "image" : images,
+        "image" : images_RGB,
+        "image_Multispectral" : image_Multispectral 
     }
     return render (request, "base.html", context)
 

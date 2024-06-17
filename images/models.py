@@ -4,6 +4,7 @@ from datetime import datetime
 
 class Images(models.Model):
     image_choice = (
+        ("RGB Orthomosaic", "RGB Orthomosaic"),
         ("Multispectral","Multispectral"),
         ("NDVI","NDVI"),
         ("Lidar","Lidar"),
