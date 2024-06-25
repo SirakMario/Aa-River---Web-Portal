@@ -16,6 +16,17 @@ def index(request):
 def about (request):
     return render(request, "about.html")
 
+def multispectral (request):
+    images_RGB = Images.objects.filter(image_type='RGB Orthomosaic').first()   #images =  Images.objects.first().image.url
+    image_Multispectral = Images.objects.filter(image_type='NDVI').first() 
+    change_detection = Images.objects.filter(image_type='Change Detection').first() 
+    context = {
+        "image" : images_RGB,
+        "image_Multispectral" : image_Multispectral,
+        "change_detection": change_detection
+    }
+    return render (request, "Multispectral.html", context)
+
 def lidar (request):
     
     lidars = Images.objects.filter(image_type='Lidar').first()    #filter(image_type="Lidar")

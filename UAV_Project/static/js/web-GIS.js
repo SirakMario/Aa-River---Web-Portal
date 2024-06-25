@@ -6,7 +6,7 @@ $('.zoom-to-layer').click(function(){
 // Full screen map view 
 var mapId1 = document.getElementById('map1');
 
-function fullScreenView () {
+function fullScreenView1 () {
   if (document.fullscreenElement){
     document.exitFullscreen()
   }else {
@@ -36,7 +36,7 @@ $('.zoom-to-layer').click(function(){
 // Full screen map view 
 var mapId2 = document.getElementById('map2');
 
-function fullScreenView () {
+function fullScreenView2 () {
   if (document.fullscreenElement){
     document.exitFullscreen()
   }else {
@@ -67,7 +67,7 @@ $('.zoom-to-layer').click(function(){
 // Full screen map view 
 var mapId3 = document.getElementById('map3');
 
-function fullScreenView () {
+function fullScreenView3 () {
   if (document.fullscreenElement){
     document.exitFullscreen()
   }else {

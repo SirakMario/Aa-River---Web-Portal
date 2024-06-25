@@ -78,8 +78,9 @@
         <!-- <hr class="featurette-divider"> -->
 
         <div class="row featurette">
-          <div class="col-md-7" style="padding-left: 50px;">
-            <h2 class="featurette-heading fw-normal lh-1">{{image.image_type}}</h2>
+          <div class="col-md-7">
+            <!-- <h2 class="featurette-heading fw-normal lh-1">{{image_Multispectral.image_type}}</h2> -->  
+            <h2 class="featurette-heading fw-normal lh-1">2024 DEM vs DSM</h2>
             {% if image.description_multi_spect %}
               <p class="lead">{{image.description_multi_spect}}</p>
             {% else %}
@@ -182,7 +183,7 @@
         </div>
         <hr class="featurette-divider">
         <div class="row featurette">
-          <div class="col-md-7" style="padding-left: 50px;">
+          <div class="col-md-7">
               <h2 class="featurette-heading fw-normal lh-1">{{change_detection.image_type}}</h2>
               {% if change_detection.description_multi_spect %}
                 <p class="lead">{{change_detection.description_multi_spect}}</p>
