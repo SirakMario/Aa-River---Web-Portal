@@ -294,11 +294,9 @@
       <hr class="featurette-divider" />
       <div class="row featurette">
         <div class="col-md-4">
-          <h2 class="featurette-heading fw-normal lh-1">
-            {{liadr_c.image_type}}
-          </h2>
-          {% if liadr_c.description_multi_spect %}
-          <p class="lead">{{liadr_c.description_multi_spect}}</p>
+          <h2 class="featurette-heading fw-normal lh-1">{{sfm.name}}</h2>
+          {% if sfm.description_multi_spect %}
+          <p class="lead">{{sfm.description_multi_spect}}</p>
           {% else %}
           <p class="lead">You Don't have Description.</p>
           {% endif %}
