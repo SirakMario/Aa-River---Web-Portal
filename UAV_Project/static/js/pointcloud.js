@@ -12,13 +12,14 @@ const deg_to_rad = (deg) => (deg * Math.PI) / 180.0;
 let container, camera, renderer, controls;
 let sceneL, sceneR;
 let sliderPos;
-const url2018 = document.getElementById("pcd2018-src").value;
-const url2022 = document.getElementById("pcd2022-src").value;
-const url2024 = document.getElementById("pcd2024-src").value;
+const sliderId = ".slider";
+const containerId = ".pcd-container";
+const url2022 = "/static/js/processed2022_subsampled.pcd"; //document.getElementById("pcd2022-src").value;
+const url2024 = "/static/js/cloud8786d920b00cdd1a_subsampled.pcd"; //document.getElementById("pcd2024-src").value;
 init();
 
 function init() {
-  container = document.querySelector(".pcd-container");
+  container = document.querySelector(containerId);
   sliderPos = container.clientWidth / 2;
 
   sceneL = new THREE.Scene();
@@ -54,7 +55,7 @@ function init() {
 }
 
 function initSlider() {
-  const slider = document.querySelector(".slider");
+  const slider = document.querySelector(sliderId);
 
   function onPointerDown() {
     if (event.isPrimary === false) return;
