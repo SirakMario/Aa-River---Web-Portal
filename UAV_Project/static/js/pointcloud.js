@@ -1,5 +1,6 @@
 import { createComparator } from "/static/js/PointCloudComparator.js";
 
+// Comparison of Point Cloud from the LIDAR
 createComparator(
   ".pcd-container",
   ".slider",

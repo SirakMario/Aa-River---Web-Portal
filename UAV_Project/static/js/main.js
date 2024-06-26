@@ -1,11 +1,12 @@
 // Structure from Motion 3D comparison
 import { createComparator } from "/static/js/PointCloudComparator.js";
 
+// Comparison of DSM (Digital Surface Model) from the SfM (Structure from Motion)
 createComparator(
   ".pcd-container2",
   ".slider2",
-  "/static/js/processed2022_subsampled.pcd",
-  "/static/js/cloud8786d920b00cdd1a_subsampled.pcd"
+  "/static/js/Default-2022-georeferenced_model.pcd",
+  "/static/js/Default-2024-Settings-georeferenced_model_subsampled.pcd"
 );
 
 // Map initialization (For The First Map)
