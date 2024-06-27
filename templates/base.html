@@ -79,9 +79,9 @@
 
         <div class="row featurette">
           <div class="col-md-7" style="padding-left: 50px;">
-            <h2 class="featurette-heading fw-normal lh-1">{{image.image_type}}</h2>
-            {% if image.description_multi_spect %}
-              <p class="lead">{{image.description_multi_spect}}</p>
+            <h2 class="featurette-heading fw-normal lh-1">{{image.name}}</h2>
+            {% if image.description %}
+              <p class="lead">{{image.description}}</p>
             {% else %}
               <p class="lead">You Don't have Description.</p>
             {% endif %}
@@ -132,9 +132,9 @@
 
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
-              <h2 class="featurette-heading fw-normal lh-1">{{image_Multispectral.image_type}}</h2>
-              {% if image_Multispectral.description_multi_spect %}
-                <p class="lead">{{image_Multispectral.description_multi_spect}}</p>
+              <h2 class="featurette-heading fw-normal lh-1">{{image_Multispectral.name}}</h2>
+              {% if image_Multispectral.description %}
+                <p class="lead">{{image_Multispectral.description}}</p>
               {% else %}
                 <p class="lead">You Don't have Description.</p>
               {% endif %}
@@ -183,9 +183,9 @@
         <hr class="featurette-divider">
         <div class="row featurette">
           <div class="col-md-7" style="padding-left: 50px;">
-              <h2 class="featurette-heading fw-normal lh-1">{{change_detection.image_type}}</h2>
-              {% if change_detection.description_multi_spect %}
-                <p class="lead">{{change_detection.description_multi_spect}}</p>
+              <h2 class="featurette-heading fw-normal lh-1">{{change_detection.name}}</h2>
+              {% if change_detection.description %}
+                <p class="lead">{{change_detection.description}}</p>
               {% else %}
                 <p class="lead">You Don't have Description.</p>
               {% endif %}
