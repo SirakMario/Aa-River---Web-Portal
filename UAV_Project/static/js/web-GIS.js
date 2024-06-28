@@ -22,7 +22,7 @@ L.control.measure({
   secondaryAreaUnit: undefined,
   activeColor: 'red',
   completedColor: 'red',
-}).addTo(map1)
+}).addTo(map1);
 
 // Map print
 L.control.browserPrint({position: 'topright' }).addTo(map1);
@@ -87,3 +87,34 @@ L.control.measure({
 
 // Map print
 L.control.browserPrint({position: 'topright' }).addTo(map3);
+
+////////////////////////////For LiDAR///////////////////////
+// Map 1_1
+// zoom to layer
+$('.zoom-to-layer').click(function(){
+  Map1_1.setView([51.944754,7.572074], 17)
+})
+
+// Full screen map view 
+var mapId1_1 = document.getElementById('Map1_1');
+
+function fullScreenView1_1 () {
+  if (document.fullscreenElement){
+    document.exitFullscreen()
+  }else {
+    mapId1_1.requestFullscreen();
+  }
+}
+
+//Leaflet measure
+L.control.measure({
+  primaryLengthUnit: 'kilometers',
+  secondaryLengthUnit: 'meters',
+  primaryAreaUnit: 'sqmeters',
+  secondaryAreaUnit: undefined,
+  activeColor: 'red',
+  completedColor: 'red',
+}).addTo(Map1_1)
+
+// Map print
+L.control.browserPrint({position: 'topright' }).addTo(Map1_1);

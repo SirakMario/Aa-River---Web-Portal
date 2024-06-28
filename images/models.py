@@ -9,12 +9,15 @@ class Images(models.Model):
         ("NDVI","NDVI"),
         ("Lidar","Lidar"),
         ("Change Detection", "Change Detection"),
+        ("sfm","sfm"),
+        ("DEM_DSM","DEM_DSM"),
+        ("Diff_DEM_DSM_Volume","Diff_DEM_DSM_Volume")
     )
     
     name = models.CharField (max_length=100, blank=False)
     date = models.DateField(default= datetime.now)
     image_type = models.CharField (max_length= 20, choices=image_choice)
-    description_multi_spect = models.TextField (blank=True)
+    description = models.TextField (blank=True)
     
     
     def __str__(self):
