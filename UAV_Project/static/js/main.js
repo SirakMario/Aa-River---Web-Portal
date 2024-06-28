@@ -172,16 +172,28 @@ L.control.layers(baseMap, overlayerMaps).addTo(map3);
 
 ////////////////////For LiDAR///////////////////////////
 // Map initialization (For The First Map)
+<<<<<<< HEAD
 var map1L = L.map("map1L").setView([51.944754, 7.572074], 17);
 map1L.zoomControl.setPosition("topright");
+=======
+var map1_1 = L.map("map1_1").setView([51.944754, 7.572074], 17);
+map1_1.zoomControl.setPosition("topright");
+>>>>>>> 98e0b576147809e376d8dd5accad7b6b32103e1c
 
 var osm = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution:
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+<<<<<<< HEAD
 }).addTo(map1L);
 
 // Map coordinate
 map1L.on("mousemove", function (e) {
+=======
+}).addTo(map1_1);
+
+// Map coordinate
+map1_1.on("mousemove", function (e) {
+>>>>>>> 98e0b576147809e376d8dd5accad7b6b32103e1c
   $(".coordinate").html(`Lat: ${e.latlng.lat} Lng: ${e.latlng.lng}`);
 });
 
@@ -194,17 +206,29 @@ var Esri_WorldImagery = L.tileLayer(
 );
 
 // Adding map scale
+<<<<<<< HEAD
 L.control.scale().addTo(map1L);
+=======
+L.control.scale().addTo(map1_1);
+>>>>>>> 98e0b576147809e376d8dd5accad7b6b32103e1c
 
 var DEM_2024 = L.Geoserver.wms ('http://localhost:8080/geoserver/UAV_Project/wms',{
   layers: 'DEM_24',
 });
+<<<<<<< HEAD
 DEM_2024.addTo(map1L);
+=======
+DEM_2024.addTo(map1_1);
+>>>>>>> 98e0b576147809e376d8dd5accad7b6b32103e1c
 
 var DSM_2024 = L.Geoserver.wms ('http://localhost:8080/geoserver/UAV_Project/wms',{
   layers: 'DSM_24',
 });
+<<<<<<< HEAD
 DSM_2024.addTo(map1L);
+=======
+DSM_2024.addTo(map1_1);
+>>>>>>> 98e0b576147809e376d8dd5accad7b6b32103e1c
 
 //Leaflet layer control
 var baseMap = {
@@ -217,5 +241,10 @@ var overlayerMaps = {
   'DSM_2024' : DSM_2024,
 };
 
+<<<<<<< HEAD
 L.control.layers(baseMap, overlayerMaps).addTo(map1L);
 L.control.sideBySide(DEM_2024, DSM_2024).addTo(map1L);
+=======
+L.control.layers(baseMap, overlayerMaps).addTo(map1_1);
+L.control.sideBySide(DEM_2024, DSM_2024).addTo(map1_1);
+>>>>>>> 98e0b576147809e376d8dd5accad7b6b32103e1c

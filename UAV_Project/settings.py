@@ -74,7 +74,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'UAV_Project',
         'USER': 'postgres',
-        'PASSWORD': 'postgres',
+        'PASSWORD': 'frs',
         'HOST': 'localhost',
         'PORT': 5432,
         
