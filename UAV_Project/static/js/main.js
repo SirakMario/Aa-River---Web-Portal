@@ -2,7 +2,6 @@
 import { createComparator } from "/static/js/PointCloudComparator.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  alert("on DOMContentLoaded create comparator");
   // Comparison of DSM (Digital Surface Model) from the SfM (Structure from Motion)
   createComparator(
     ".pcd-container2",
