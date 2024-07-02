@@ -90,7 +90,14 @@ var Esri_WorldImagery = L.tileLayer(
 // Adding map scale
 L.control.scale().addTo(map2);
 
-//http://localhost:8080/geoserver/TEST/wms
+var NDVI_2024 = L.Geoserver.wms(
+  "http://localhost:8080/geoserver/UAV_Project/wms",
+  {
+    layers: "NDVI_2024",
+  }
+);
+NDVI_2024.addTo(map2);
+
 var NDVI_2023 = L.Geoserver.wms(
   "http://localhost:8080/geoserver/UAV_Project/wms",
   {
@@ -107,10 +114,11 @@ var baseMap = {
 
 var overlayerMaps = {
   NDVI_2023: NDVI_2023,
+  NDVI_2024: NDVI_2024,
 };
 
 L.control.layers(baseMap, overlayerMaps).addTo(map2);
-//L.control.sideBySide(wmsLayer_RGB_2024, wmsLayer_RGB_2023).addTo(map2);
+L.control.sideBySide(NDVI_2023, NDVI_2024).addTo(map2);
 
 //////////////////////////////////////////////////////////
 // Map initialization (Third map)
@@ -161,19 +169,18 @@ var overlayerMaps = {
 
 L.control.layers(baseMap, overlayerMaps).addTo(map3);
 
-
 ////////////////////For LiDAR///////////////////////////
 // Map initialization (For The First Map)
-var map1_1 = L.map("map1_1").setView([51.944754, 7.572074], 17);
-map1_1.zoomControl.setPosition("topright");
+var map1L = L.map("map1L").setView([51.944754, 7.572074], 17);
+map1L.zoomControl.setPosition("topright");
 
 var osm = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution:
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-}).addTo(map1_1);
+}).addTo(map1L);
 
 // Map coordinate
-map1_1.on("mousemove", function (e) {
+map1L.on("mousemove", function (e) {
   $(".coordinate").html(`Lat: ${e.latlng.lat} Lng: ${e.latlng.lng}`);
 });
 
@@ -186,17 +193,23 @@ var Esri_WorldImagery = L.tileLayer(
 );
 
 // Adding map scale
-L.control.scale().addTo(map1_1);
+L.control.scale().addTo(map1L);
 
-var DEM_2024 = L.Geoserver.wms ('http://localhost:8080/geoserver/UAV_Project/wms',{
-  layers: 'DEM_24',
-});
-DEM_2024.addTo(map1_1);
+var DEM_2024 = L.Geoserver.wms(
+  "http://localhost:8080/geoserver/UAV_Project/wms",
+  {
+    layers: "DEM_24",
+  }
+);
+DEM_2024.addTo(map1L);
 
-var DSM_2024 = L.Geoserver.wms ('http://localhost:8080/geoserver/UAV_Project/wms',{
-  layers: 'DSM_24',
-});
-DSM_2024.addTo(map1_1);
+var DSM_2024 = L.Geoserver.wms(
+  "http://localhost:8080/geoserver/UAV_Project/wms",
+  {
+    layers: "DSM_24",
+  }
+);
+DSM_2024.addTo(map1L);
 
 //Leaflet layer control
 var baseMap = {
@@ -205,9 +218,9 @@ var baseMap = {
 };
 
 var overlayerMaps = {
-  'DEM_2024' : DEM_2024,
-  'DSM_2024' : DSM_2024,
+  DEM_2024: DEM_2024,
+  DSM_2024: DSM_2024,
 };
 
-L.control.layers(baseMap, overlayerMaps).addTo(map1_1);
-L.control.sideBySide(DEM_2024, DSM_2024).addTo(map1_1);
+L.control.layers(baseMap, overlayerMaps).addTo(map1L);
+L.control.sideBySide(DEM_2024, DSM_2024).addTo(map1L);
