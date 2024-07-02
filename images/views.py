@@ -24,7 +24,7 @@ def multispectral (request):
 def lidar (request):
     
     lidars = Images.objects.filter(image_type='Lidar').first()   #filter(image_type="Lidar")
-    DEM_DSE_24 = Images.objects.filter(image_type='DEM_DSE_24').first()
+    DEM_DSE_24 = Images.objects.filter(image_type='DEM_DSE').first()
     Diff_lidar = Images.objects.filter(image_type='Diff_DEM_DSM_Volume').first()
     context = {
         "liadr_c": lidars,

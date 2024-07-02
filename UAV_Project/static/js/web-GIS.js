@@ -96,7 +96,7 @@ $('.zoom-to-layer').click(function(){
 })
 
 // Full screen map view 
-var mapId1_1 = document.getElementById('Map1_1');
+var mapId1_1 = document.getElementById('Map1L');
 
 function fullScreenView1_1 () {
   if (document.fullscreenElement){
@@ -117,4 +117,4 @@ L.control.measure({
 }).addTo(Map1_1)
 
 // Map print
-L.control.browserPrint({position: 'topright' }).addTo(Map1_1);
+L.control.browserPrint({position: 'topright' }).addTo(Map1L);
