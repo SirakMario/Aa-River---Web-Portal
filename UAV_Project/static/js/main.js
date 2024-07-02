@@ -118,7 +118,7 @@ var overlayerMaps = {
 };
 
 L.control.layers(baseMap, overlayerMaps).addTo(map2);
-L.control.sideBySide(NDVI_2023,NDVI_2024).addTo(map2);
+L.control.sideBySide(NDVI_2023, NDVI_2024).addTo(map2);
 
 //////////////////////////////////////////////////////////
 // Map initialization (Third map)

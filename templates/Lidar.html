@@ -101,7 +101,7 @@
       {% include 'partials/_topbar.html'%}
 
       <div class="row featurette">
-        <div class="col-md-7" style="padding-left: 20px;">
+        <div class="col-md-7" style="padding-left: 20px">
           <!-- <h2 class="featurette-heading fw-normal lh-1">{{image_Multispectral.image_type}}</h2> -->
           <h2 class="featurette-heading fw-normal lh-1">DEM vs DSM 2024</h2>
           {% if DEM_DSE_24.description %}
@@ -159,8 +159,8 @@
           </div>
         </div>
       </div>
-      
-      <hr>
+
+      <hr />
 
       <div id="views-container" class="container-fluid" style="height: 500px">
         <div id="lidar-comparison" class="row">
@@ -217,6 +217,5 @@
     <script src="{% static 'js/main_lidar.js'%}"></script>
     <script src="{% static 'js/web-GIS_lidar.js'%}"></script>
     <script type="module" src="{%static 'js/pointcloud.js'%}"></script>
-  
   </body>
 </html>
