@@ -1,13 +1,16 @@
 // Structure from Motion 3D comparison
 import { createComparator } from "/static/js/PointCloudComparator.js";
 
-// Comparison of DSM (Digital Surface Model) from the SfM (Structure from Motion)
-createComparator(
-  ".pcd-container2",
-  ".slider2",
-  "/static/js/Default-2022-georeferenced_model.pcd",
-  "/static/js/Default-2024-Settings-georeferenced_model_subsampled.pcd"
-);
+document.addEventListener("DOMContentLoaded", () => {
+  alert("on DOMContentLoaded create comparator");
+  // Comparison of DSM (Digital Surface Model) from the SfM (Structure from Motion)
+  createComparator(
+    ".pcd-container2",
+    ".slider2",
+    "/static/js/Default-2022-georeferenced_model.pcd",
+    "/static/js/Default-2024-Settings-georeferenced_model_subsampled.pcd"
+  );
+});
 
 // Map initialization (For The First Map)
 var map1 = L.map("map1").setView([51.944754, 7.572074], 17);
