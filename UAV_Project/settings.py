@@ -1,11 +1,6 @@
 from pathlib import Path
 import os
 
-if os.name == 'nt':
-    VENV_BASE = os.environ['VIRTUAL_ENV']
-    os.environ['path'] = os.path.join(VENV_BASE,'Lib\\site-packages\\osgeo') + ';' + os.environ['PATH']
-    os.environ['PROJ_LIB'] = os.path.join(VENV_BASE,'Lib\\site-packages\\osgeo\\data\\proj') + ';' + os.environ['PATH']
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -19,7 +14,7 @@ SECRET_KEY = 'django-insecure-=29(6bri$&nw4po1_-8*93fq$8^*x=@2!_xp&@s(0#ihtnwhz6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["10.65.50.119","127.0.0.1","172.20.10.2"]
+ALLOWED_HOSTS = ["127.0.0.1","10.6.4.12","10.6.4.12"]
 
 
 # Application definition
@@ -74,8 +69,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'UAV_Project',
         'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'HOST': 'localhost',
+        'PASSWORD': 'frs',
+        'HOST': '10.6.4.12',
         'PORT': 5432,
         
     }
