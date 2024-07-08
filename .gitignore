@@ -2,4 +2,4 @@
 venv/
 /static
 # Ignore uploaded images
-media/images_to/
+venv.rar

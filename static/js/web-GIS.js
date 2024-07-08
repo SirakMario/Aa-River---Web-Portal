@@ -22,7 +22,7 @@ L.control.measure({
   secondaryAreaUnit: undefined,
   activeColor: 'red',
   completedColor: 'red',
-}).addTo(map1)
+}).addTo(map1);
 
 // Map print
 L.control.browserPrint({position: 'topright' }).addTo(map1);
