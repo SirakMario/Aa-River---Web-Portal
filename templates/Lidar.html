@@ -105,9 +105,9 @@
           <!-- <h2 class="featurette-heading fw-normal lh-1">{{image_Multispectral.image_type}}</h2> -->
           <h2 class="featurette-heading fw-normal lh-1">DEM vs DSM 2024</h2>
           {% if DEM_DSE_24.description %}
-            <p class="lead">{{DEM_DSE_24.description}}</p>
+          <p class="lead">{{DEM_DSE_24.description}}</p>
           {% else %}
-            <p class="lead">You Don't have Description.</p>
+          <p class="lead">You Don't have Description.</p>
           {% endif %}
         </div>
         <div class="col-md-5">
@@ -186,12 +186,12 @@
             <input
               type="hidden"
               id="pcd2022-src"
-              value="{% static 'js/processed2022_subsampled.pcd' %}"
+              value="{% static 'js/cloud2022_subsampled_1M.pcd' %}"
             />
             <input
               type="hidden"
               id="pcd2024-src"
-              value="{% static 'js/cloud8786d920b00cdd1a_subsampled.pcd' %}"
+              value="{% static 'js/cloud2024_subsampled_1M.pcd' %}"
             />
           </div>
         </div>
