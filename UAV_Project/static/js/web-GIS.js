@@ -1,5 +1,6 @@
 // zoom to layer
-$('.zoom-to-layer1').click(function(){
+$('#myid').click(function(){
+  alert("zoom to layer one")
   map1.setView([51.944754,7.572074], 17)
 })
 
@@ -29,7 +30,7 @@ L.control.browserPrint({position: 'topright' }).addTo(map1);
 
 ////////////////////// Map2 ///////////////////////////////
 // zoom to layer
-$('.zoom-to-layer2').click(function(){
+$('.zoom-to-layer').click(function(){
   map2.setView([51.944754,7.572074], 17)
 })
 
@@ -59,7 +60,7 @@ L.control.browserPrint({position: 'topright' }).addTo(map2);
 
 ////////////////////// Map21 ///////////////////////////////
 // zoom to layer
-$('.zoom-to-layer21').click(function(){
+$('.zoom-to-layer').click(function(){
   map21.setView([51.944754,7.572074], 17)
 })
 
@@ -90,7 +91,7 @@ L.control.browserPrint({position: 'topright' }).addTo(map21);
 
 //////////////// Map 3 Change detection //////////////////////
 // zoom to layer
-$('.zoom-to-layer3').click(function(){
+$('.zoom-to-layer').click(function(){
   map3.setView([51.944754,7.572074], 17)
 })
 
@@ -120,7 +121,7 @@ L.control.browserPrint({position: 'topright' }).addTo(map3);
 
 //////////////// Map 31 DSM //////////////////////
 // zoom to layer
-$('.zoom-to-layer31').click(function(){
+$('.zoom-to-layer').click(function(){
   map31.setView([51.944754,7.572074], 17)
 })
 
@@ -149,7 +150,7 @@ L.control.measure({
 L.control.browserPrint({position: 'topright' }).addTo(map31);
 //////////////// Map 32 DTM //////////////////////
 // zoom to layer
-$('.zoom-to-layer32').click(function(){
+$('.zoom-to-layer').click(function(){
   map32.setView([51.944754,7.572074], 17)
 })
 
@@ -178,7 +179,7 @@ L.control.measure({
 L.control.browserPrint({position: 'topright' }).addTo(map32);
 //////////////// Map 33 CHM //////////////////////
 // zoom to layer
-$('.zoom-to-layer33').click(function(){
+$('.zoom-to-layer').click(function(){
   map33.setView([51.944754,7.572074], 17)
 })
 

@@ -15,7 +15,9 @@ let sliderPos;
 const url2018 = document.getElementById("pcd2018-src").value;
 const url2022 = document.getElementById("pcd2022-src").value;
 const url2024 = document.getElementById("pcd2024-src").value;
-init();
+document.addEventListener("DOMContentLoaded", () => {
+  init();
+});
 
 function init() {
   container = document.querySelector(".pcd-container");
@@ -40,12 +42,11 @@ function init() {
   renderer.setPixelRatio(container.devicePixelRatio);
   renderer.setSize(container.clientWidth, container.clientHeight);
   renderer.setScissorTest(true);
-  renderer.setAnimationLoop(animate);
   container.appendChild(renderer.domElement);
 
   // TODO: reset button to get control to initial state
   controls = new OrbitControls(camera, renderer.domElement);
-
+  controls.addEventListener("change", animate);
   initSlider();
   initMeshes();
 
@@ -82,6 +83,7 @@ function initSlider() {
     sliderPos = Math.max(0, Math.min(rightContainer, e.pageX) - leftContainer);
 
     slider.style.left = sliderPos - slider.offsetWidth / 2 + "px";
+    animate();
   }
 
   slider.style.touchAction = "none"; // disable touch scroll
@@ -135,6 +137,7 @@ function initMeshes() {
     points.material.size = 1.2;
 
     sceneL.add(points);
+    animate();
   });
 
   // 'points' is an Object3D
@@ -154,6 +157,7 @@ function initMeshes() {
     points.material.size = 1.2;
 
     sceneR.add(points);
+    animate();
   });
 }
 

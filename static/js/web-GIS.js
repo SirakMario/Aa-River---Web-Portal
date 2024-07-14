@@ -1,5 +1,6 @@
 // zoom to layer
-$('.zoom-to-layer').click(function(){
+$('#myid').click(function(){
+  alert("zoom to layer one")
   map1.setView([51.944754,7.572074], 17)
 })
 

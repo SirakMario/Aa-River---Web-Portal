@@ -19,14 +19,14 @@ var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest
 L.control.scale().addTo(map1)
 
 var wmsLayer_RGB_2024 = L.Geoserver.wms('http://10.6.4.12:8080/geoserver/UAV_Project/wms',{
-  layers:'2024',
+  layers:'Classify_Texture_Multi_24',
 });
 wmsLayer_RGB_2024.addTo(map1);
 
-var wmsLayer_RGB_2022 = L.Geoserver.wms ('http://10.6.4.12:8080/geoserver/UAV_Project/wms',{
-  layers: '2022',
+var wmsLayer_RGB_2023 = L.Geoserver.wms ('http://10.6.4.12:8080/geoserver/UAV_Project/wms',{
+  layers: 'Classify_Texture_Multi_23',
 });
-wmsLayer_RGB_2022.addTo(map1);
+wmsLayer_RGB_2023.addTo(map1);
 
 //Leaflet layer control
 var baseMap = {
@@ -36,11 +36,11 @@ var baseMap = {
 
 var overlayerMaps = {
   'RGB_2024': wmsLayer_RGB_2024,
-  'RGB_2022': wmsLayer_RGB_2022,
+  'RGB_2022': wmsLayer_RGB_2023,
 }
 
 L.control.layers(baseMap, overlayerMaps).addTo(map1);
-L.control.sideBySide(wmsLayer_RGB_2024, wmsLayer_RGB_2022 ).addTo(map1);
+L.control.sideBySide(wmsLayer_RGB_2024, wmsLayer_RGB_2023 ).addTo(map1);
 
 
 /////////////////////////////////////////////////////////
@@ -157,7 +157,7 @@ L.control.scale().addTo(map3)
 
 //http://10.6.4.12:8080/geoserver/TEST/wms
 var Change_detect = L.Geoserver.wms('http://10.6.4.12:8080/geoserver/UAV_Project/wms',{
-  layers:'Change_Detection',
+  layers:'Change_detection_2',
 });
 Change_detect.addTo(map3);
 
@@ -244,12 +244,12 @@ L.control.scale().addTo(map32)
 
 //http://10.6.4.12:8080/geoserver/TEST/wms
 var DTM_24 = L.Geoserver.wms('http://10.6.4.12:8080/geoserver/UAV_Project/wms',{
-  layers: 'DTM_24',
+  layers: 'DTM 2024',
 });
 DTM_24.addTo(map32);
 
 var DTM_22 = L.Geoserver.wms('http://10.6.4.12:8080/geoserver/UAV_Project/wms',{
-  layers:'DTM_22',
+  layers:'DTM 2022',
 });
 DTM_22.addTo(map32);
 
