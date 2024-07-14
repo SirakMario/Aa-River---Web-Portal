@@ -71,6 +71,15 @@ var NDVI_2024 = L.Geoserver.wms('http://10.6.4.12:8080/geoserver/UAV_Project/wms
 });
 NDVI_2024.addTo(map2);
 
+var ndvilegend = L.control({position: 'bottomright'});
+ndvilegend.onAdd = function (map2) {
+  var div = L.DomUtil.create('div', 'info legend');
+      div.innerHTML +=
+      '<img src="http://localhost:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=UAV_Project:NDVI_2023" alt="legend" width="70" height="100">';
+  return div;
+  };
+  ndvilegend.addTo(map2);
+  
 var NDVI_2023 = L.Geoserver.wms('http://10.6.4.12:8080/geoserver/UAV_Project/wms',{
   layers:'NDVI_2023',
 });
