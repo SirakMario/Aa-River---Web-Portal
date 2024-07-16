@@ -36,6 +36,16 @@
   .carousel-item p, .carousel-item h1 {
     text-shadow: black 1px 0 10px;;
   }
+
+  /* .featurette-image {
+    width: 80%;
+    height: auto;
+  }
+
+  #map21 {
+    width: 200;
+    height: 200;
+  } */
 }
 
 @media (min-width: 768px) {

@@ -87,30 +87,6 @@ function initSlider() {
 
 function initMeshes() {
   const loader = new PCDLoader();
-  // 'points' is an Object3D
-  // loader.load(url2018, function (points) {
-  //   points.geometry.center();
-  //   points.name = "river.pcd";
-
-  //   // Rotation uses Euler angle in rad
-  //   // z rotation: positive is counter-clockwise, negative is clockwise
-  //   points.rotation.z = deg_to_rad(55); // make it horizontal rectangle from top view
-  //   // x rotation: positive rotates towards user view, negative increases the angle away from the user view
-  //   // points.rotation.x = -deg_to_rad(90);
-  //   // y rotation: at this point, like the pitch angle
-  //   // points.rotation.y = deg_to_rad(10);
-
-  //   points.translateX(10);
-  //   points.translateY(-6);
-
-  //   let scale = 1.1;
-  //   points.scale.set(scale, scale, scale);
-  //   // Set static size
-  //   points.material.size = 1.2;
-
-  //   sceneL.add(points);
-  // });
-
   loader.load(url2022, function (points) {
     points.geometry.center();
 

@@ -32,11 +32,13 @@ def multispectral (request):
 def lidar (request):
     
     lidars = Images.objects.filter(image_type='Lidar').first()   #filter(image_type="Lidar")
-    DEM_DSE_24 = Images.objects.filter(image_type='DEM_DSE').first()
+    DEM_DSM_24 = Images.objects.filter(image_type='DEM_DSM').first()
     Diff_lidar = Images.objects.filter(image_type='Diff_DEM_DSM_Volume').first()
+    Hillshade_slope = Images.objects.filter(image_type='Hillshade_slope').first()
     context = {
         "liadr_c": lidars,
-        "DEM_DSE_24": DEM_DSE_24,
+        "DEM_DSM_24": DEM_DSM_24,
         "Diff_lidar" : Diff_lidar,
+        "Hillshade_slope": Hillshade_slope
     }
     return render(request, "Lidar.html",context)

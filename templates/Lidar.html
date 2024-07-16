@@ -103,9 +103,9 @@
       <div class="row featurette">
         <div class="col-md-7" style="padding-left: 20px">
           <!-- <h2 class="featurette-heading fw-normal lh-1">{{image_Multispectral.image_type}}</h2> -->
-          <h2 class="featurette-heading fw-normal lh-1">DEM vs DSM 2024</h2>
-          {% if DEM_DSE_24.description %}
-            <p class="lead">{{DEM_DSE_24.description}}</p>
+          <h2 class="featurette-heading fw-normal lh-1">{{DEM_DSM_24.name}}</h2>
+          {% if DEM_DSM_24.description %}
+            <p class="lead">{{DEM_DSM_24.description}}</p>
           {% else %}
             <p class="lead">You Don't have Description.</p>
           {% endif %}
@@ -161,9 +161,9 @@
       <div class="row featurette">
         <div class="col-md-7 order-md-2" style="padding-left: 20px">
           <!-- <h2 class="featurette-heading fw-normal lh-1">{{image_Multispectral.image_type}}</h2> -->
-          <h2 class="featurette-heading fw-normal lh-1">Diff DEM, DSM, Canopy Volume</h2>
-          {% if DEM_DSE_24.description %}
-            <p class="lead">{{DEM_DSE_24.description}}</p>
+          <h2 class="featurette-heading fw-normal lh-1">{{Diff_lidar.name}}</h2>
+          {% if Diff_lidar.description %}
+            <p class="lead">{{Diff_lidar.description}}</p>
           {% else %}
             <p class="lead">You Don't have Description.</p>
           {% endif %}
@@ -218,9 +218,9 @@
       <div class="row featurette">
         <div class="col-md-7" style="padding-left: 20px">
           <!-- <h2 class="featurette-heading fw-normal lh-1">{{image_Multispectral.image_type}}</h2> -->
-          <h2 class="featurette-heading fw-normal lh-1">Hillshade and Slope 2024</h2>
-          {% if DEM_DSE_24.description %}
-            <p class="lead">{{DEM_DSE_24.description}}</p>
+          <h2 class="featurette-heading fw-normal lh-1">{{Hillshade_slope.name}}</h2>
+          {% if Hillshade_slope.description %}
+            <p class="lead">{{Hillshade_slope.description}}</p>
           {% else %}
             <p class="lead">You Don't have Description.</p>
           {% endif %}
@@ -276,7 +276,7 @@
         <div id="lidar-comparison" class="row">
           <div id="lidar-comparison-description" class="col-md-4">
             <h2 class="featurette-heading fw-normal lh-1">
-              {{liadr_c.image_type}}
+              {{liadr_c.name}}
             </h2>
             {% if liadr_c.description %}
             <p class="lead">{{liadr_c.description}}</p>

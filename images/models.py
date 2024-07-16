@@ -14,7 +14,8 @@ class Images(models.Model):
         ("Lidar","Lidar"),
         ("sfm","sfm"),
         ("DEM_DSM","DEM_DSM"),
-        ("Diff_DEM_DSM_Volume","Diff_DEM_DSM_Volume")
+        ("Diff_DEM_DSM_Volume","Diff_DEM_DSM_Volume"),
+        ("Hillshade_slope","Hillshade_slope"),
     )
     
     name = models.CharField (max_length=100, blank=False)
