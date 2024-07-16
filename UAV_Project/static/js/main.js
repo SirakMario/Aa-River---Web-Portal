@@ -28,6 +28,14 @@ var wmsLayer_RGB_2023 = L.Geoserver.wms ('http://10.6.4.12:8080/geoserver/UAV_Pr
 });
 wmsLayer_RGB_2023.addTo(map1);
 
+var wmsLayer_RGB_legend = L.control({position: 'bottomright'});
+wmsLayer_RGB_legend.onAdd = function (map1) {
+  var div = L.DomUtil.create('div', 'info legend');
+      div.innerHTML +=
+      '<img src="http://10.6.4.12:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=UAV_Project:Classify_Texture_Multi_23" alt="legend" width="100" height="150">';
+  return div;
+  };
+  wmsLayer_RGB_legend.addTo(map1);
 //Leaflet layer control
 var baseMap = {
   'OSM': osm,
@@ -81,7 +89,7 @@ var ndvilegend = L.control({position: 'bottomright'});
 ndvilegend.onAdd = function (map2) {
   var div = L.DomUtil.create('div', 'info legend');
       div.innerHTML +=
-      '<img src="http://localhost:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=UAV_Project:NDVI_2023" alt="legend" width="70" height="100">';
+      '<img src="http://10.6.4.12:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=UAV_Project:NDVI_2023" alt="legend" width="70" height="100">';
   return div;
   };
   ndvilegend.addTo(map2);
@@ -128,10 +136,10 @@ var NDVI_Change = L.Geoserver.wms('http://10.6.4.12:8080/geoserver/UAV_Project/w
 NDVI_Change.addTo(map21);
 
 var ndvi_change_legend = L.control({position: 'bottomright'});
-ndvi_change_legend.onAdd = function (map2) {
+ndvi_change_legend.onAdd = function (map21) {
   var div = L.DomUtil.create('div', 'info legend');
       div.innerHTML +=
-      '<img src="http://localhost:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=UAV_Project:NDVI_change_2" alt="legend" width="70" height="70">';
+      '<img src="http://10.6.4.12:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=UAV_Project:NDVI_change_2" alt="legend" width="70" height="70">';
   return div;
   };
   ndvi_change_legend.addTo(map21);
@@ -178,6 +186,15 @@ var Change_detect = L.Geoserver.wms('http://10.6.4.12:8080/geoserver/UAV_Project
 });
 Change_detect.addTo(map3);
 
+var Change_detect_legend = L.control({position: 'bottomright'});
+Change_detect_legend.onAdd = function (map3) {
+  var div = L.DomUtil.create('div', 'info legend');
+      div.innerHTML +=
+      '<img src="http://10.6.4.12:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=UAV_Project:Change_detection_2" alt="legend" width="70" height="150">';
+  return div;
+  };
+  Change_detect_legend.addTo(map3);
+
 //Leaflet layer control
 var baseMap = {
   'OSM': osm,
@@ -223,6 +240,14 @@ var DSM_22 = L.Geoserver.wms('http://10.6.4.12:8080/geoserver/UAV_Project/wms',{
 });
 DSM_22.addTo(map31);
 
+var DSM_legend = L.control({position: 'bottomright'});
+DSM_legend.onAdd = function (map31) {
+  var div = L.DomUtil.create('div', 'info legend');
+      div.innerHTML +=
+      '<img src="http://10.6.4.12:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=UAV_Project:DSM_22_Muguel" alt="legend" width="70" height="150">';
+  return div;
+  };
+  DSM_legend.addTo(map31);
 //Leaflet layer control
 var baseMap = {
   'OSM': osm,
@@ -269,6 +294,15 @@ var DTM_22 = L.Geoserver.wms('http://10.6.4.12:8080/geoserver/UAV_Project/wms',{
   layers:'DTM 2022',
 });
 DTM_22.addTo(map32);
+
+var DTM_legend = L.control({position: 'bottomright'});
+DTM_legend.onAdd = function (map32) {
+  var div = L.DomUtil.create('div', 'info legend');
+      div.innerHTML +=
+      '<img src="http://10.6.4.12:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=UAV_Project:DTM 2022" alt="legend" width="70" height="200">';
+  return div;
+  };
+  DTM_legend.addTo(map32);
 
 //Leaflet layer control
 var baseMap = {
@@ -318,6 +352,14 @@ var CHM_22 = L.Geoserver.wms('http://10.6.4.12:8080/geoserver/UAV_Project/wms',{
 });
 CHM_22.addTo(map33);
 
+var CHM_legend = L.control({position: 'bottomright'});
+CHM_legend.onAdd = function (map33) {
+  var div = L.DomUtil.create('div', 'info legend');
+      div.innerHTML +=
+      '<img src="http://10.6.4.12:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=UAV_Project:CHM_24" alt="legend" width="70" height="150">';
+  return div;
+  };
+  CHM_legend.addTo(map33);
 //Leaflet layer control
 var baseMap = {
   'OSM': osm,

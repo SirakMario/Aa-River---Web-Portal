@@ -151,7 +151,7 @@ var Hillshade_24_legend = L.control({position: 'bottomleft'});
 Hillshade_24_legend.onAdd = function (mapL3) {
   var div = L.DomUtil.create('div', 'info legend');
       div.innerHTML +=
-      '<img src="http://localhost:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=UAV_Project:Hillshade_24" alt="legend" width="70" height="200">';
+      '<img src="http://localhost:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=UAV_Project:Hillshade_24" alt="legend" width="70" height="100">';
   return div;
   };
   Hillshade_24_legend.addTo(mapL3);
@@ -161,14 +161,14 @@ var Slope_24 = L.Geoserver.wms ('http://10.6.4.12:8080/geoserver/UAV_Project/wms
 });
 Slope_24.addTo(mapL3);
 
-var Hillshade_24_legend = L.control({position: 'bottomright'});
-Hillshade_24_legend.onAdd = function (mapL3) {
+var Slope_24_legend = L.control({position: 'bottomright'});
+Slope_24_legend.onAdd = function (mapL3) {
   var div = L.DomUtil.create('div', 'info legend');
       div.innerHTML +=
       '<img src="http://localhost:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=UAV_Project:Slope_24" alt="legend" width="70" height="100">';
   return div;
   };
-  Hillshade_24_legend.addTo(mapL3);
+  Slope_24_legend.addTo(mapL3);
 
 
 

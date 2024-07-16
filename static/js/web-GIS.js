@@ -1,11 +1,10 @@
 // zoom to layer
-$('#myid').click(function(){
-  alert("zoom to layer one")
+$('#myid1').click(function(){
   map1.setView([51.944754,7.572074], 17)
 })
 
 // Full screen map view 
-var mapIdRGB = document.getElementById('map1');
+var mapId1 = document.getElementById('map1');
 
 function fullScreenView1 () {
   if (document.fullscreenElement){
@@ -30,7 +29,7 @@ L.control.browserPrint({position: 'topright' }).addTo(map1);
 
 ////////////////////// Map2 ///////////////////////////////
 // zoom to layer
-$('.zoom-to-layer').click(function(){
+$('#myid2').click(function(){
   map2.setView([51.944754,7.572074], 17)
 })
 
@@ -60,7 +59,7 @@ L.control.browserPrint({position: 'topright' }).addTo(map2);
 
 ////////////////////// Map21 ///////////////////////////////
 // zoom to layer
-$('.zoom-to-layer').click(function(){
+$('#myid3').click(function(){
   map21.setView([51.944754,7.572074], 17)
 })
 
@@ -91,7 +90,7 @@ L.control.browserPrint({position: 'topright' }).addTo(map21);
 
 //////////////// Map 3 Change detection //////////////////////
 // zoom to layer
-$('.zoom-to-layer').click(function(){
+$('#myid4').click(function(){
   map3.setView([51.944754,7.572074], 17)
 })
 
@@ -121,7 +120,7 @@ L.control.browserPrint({position: 'topright' }).addTo(map3);
 
 //////////////// Map 31 DSM //////////////////////
 // zoom to layer
-$('.zoom-to-layer').click(function(){
+$('#myid5').click(function(){
   map31.setView([51.944754,7.572074], 17)
 })
 
@@ -150,7 +149,7 @@ L.control.measure({
 L.control.browserPrint({position: 'topright' }).addTo(map31);
 //////////////// Map 32 DTM //////////////////////
 // zoom to layer
-$('.zoom-to-layer').click(function(){
+$('#myid6').click(function(){
   map32.setView([51.944754,7.572074], 17)
 })
 
@@ -179,7 +178,7 @@ L.control.measure({
 L.control.browserPrint({position: 'topright' }).addTo(map32);
 //////////////// Map 33 CHM //////////////////////
 // zoom to layer
-$('.zoom-to-layer').click(function(){
+$('#myid7').click(function(){
   map33.setView([51.944754,7.572074], 17)
 })
 
