@@ -23,6 +23,21 @@
     right: 10px;
     top: 260px;
 }
+
+@media (max-width: 40em) {
+  img {
+    object-fit: cover;
+  }
+  /* Crop image of carousel content in small screens */
+  .carousel-item img {
+    object-fit: cover;
+  }
+
+  .carousel-item p, .carousel-item h1 {
+    text-shadow: black 1px 0 10px;;
+  }
+}
+
 @media (min-width: 768px) {
     .bd-placeholder-img-lg {
       font-size: 3.5rem;

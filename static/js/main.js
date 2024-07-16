@@ -299,7 +299,7 @@ var DTM_legend = L.control({position: 'bottomright'});
 DTM_legend.onAdd = function (map32) {
   var div = L.DomUtil.create('div', 'info legend');
       div.innerHTML +=
-      '<img src="http://10.6.4.12:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=UAV_Project:DTM 2022" alt="legend" width="70" height="200">';
+      '<img src="http://10.6.4.12:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=UAV_Project:DTM 2022" alt="legend" width="70" height="150">';
   return div;
   };
   DTM_legend.addTo(map32);
