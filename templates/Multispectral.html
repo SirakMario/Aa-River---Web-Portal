@@ -129,7 +129,7 @@
 
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
-              <h2 class="featurette-heading fw-normal lh-1">NDVI</h2>
+              <h2 class="featurette-heading fw-normal lh-1">{{NDVI.name}}</h2>
               {% if NDVI.description %}
                 <p class="lead">{{NDVI.description}}</p>
               {% else %}
@@ -181,7 +181,7 @@
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1">NDVI Changes</h2>
+            <h2 class="featurette-heading fw-normal lh-1">{{NDVI_change.name}}</h2>
             {% if NDVI_change.description %}
               <p class="lead">{{NDVI_change.description}}</p>
             {% else %}
@@ -234,7 +234,7 @@
         
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
-              <h2 class="featurette-heading fw-normal lh-1">Change Detection</h2>
+              <h2 class="featurette-heading fw-normal lh-1">{{change_detection.name}}</h2>
               {% if change_detection.description %}
                 <p class="lead">{{change_detection.description}}</p>
               {% else %}
@@ -287,9 +287,9 @@
         <div class="row featurette">
           <div class="col-md-7">
             <!-- <h2 class="featurette-heading fw-normal lh-1">{{image_Multispectral.image_type}}</h2> -->  
-            <h2 class="featurette-heading fw-normal lh-1">DSM</h2>
-            {% if NDVI_change.description %}
-              <p class="lead">{{NDVI_change.description}}</p>
+            <h2 class="featurette-heading fw-normal lh-1">{{DSM.name}}</h2>
+            {% if DSM.description %}
+              <p class="lead">{{DSM.description}}</p>
             {% else %}
               <p class="lead">You Don't have Description.</p>
             {% endif %}
@@ -339,9 +339,9 @@
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
             <!-- <h2 class="featurette-heading fw-normal lh-1">{{image_Multispectral.image_type}}</h2> -->  
-            <h2 class="featurette-heading fw-normal lh-1">DTM</h2>
-            {% if NDVI_change.description %}
-              <p class="lead">{{NDVI_change.description}}</p>
+            <h2 class="featurette-heading fw-normal lh-1">{{DTM.name}}</h2>
+            {% if DTM.description %}
+              <p class="lead">{{DTM.description}}</p>
             {% else %}
               <p class="lead">You Don't have Description.</p>
             {% endif %}
@@ -353,7 +353,7 @@
                 <div class="coordinate32"></div>
               </div>
               <!--Full browser-->
-              <!-- <div class="leaflet-control full-screen" onclick="fullScreenView1()"> -->
+              <div class="leaflet-control full-screen" onclick="fullScreenView1()">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1.5em"
@@ -369,7 +369,7 @@
                 </svg>
               </div>
               <!--Zoom to layers-->
-              <div id="myid6" class="leaflet-control zoom-to-layer32">
+              <div id="myid6" class="leaflet-control zoom-to-layer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1.5em"
@@ -391,9 +391,9 @@
         <div class="row featurette">
           <div class="col-md-7">
             <!-- <h2 class="featurette-heading fw-normal lh-1">{{image_Multispectral.image_type}}</h2> -->  
-            <h2 class="featurette-heading fw-normal lh-1">CHM</h2>
-            {% if NDVI_change.description %}
-              <p class="lead">{{NDVI_change.description}}</p>
+            <h2 class="featurette-heading fw-normal lh-1">{{CHM.name}}</h2>
+            {% if CHM.description %}
+              <p class="lead">{{CHM.description}}</p>
             {% else %}
               <p class="lead">You Don't have Description.</p>
             {% endif %}

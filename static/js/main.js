@@ -110,7 +110,7 @@ L.control.sideBySide(NDVI_2024, NDVI_2023).addTo(map2);
 
 // Map initialization (NDVI Change)
 var map21 = L.map("map21").setView([51.944754,7.572074], 17);
-map2.zoomControl.setPosition('topright');
+map21.zoomControl.setPosition('topright');
 
 var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

@@ -110,7 +110,7 @@ L.control.sideBySide(NDVI_2024, NDVI_2023).addTo(map2);
 
 // Map initialization (NDVI Change)
 var map21 = L.map("map21").setView([51.944754,7.572074], 17);
-map2.zoomControl.setPosition('topright');
+map21.zoomControl.setPosition('topright');
 
 var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -299,7 +299,7 @@ var DTM_legend = L.control({position: 'bottomright'});
 DTM_legend.onAdd = function (map32) {
   var div = L.DomUtil.create('div', 'info legend');
       div.innerHTML +=
-      '<img src="http://10.6.4.12:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=UAV_Project:DTM 2022" alt="legend" width="70" height="200">';
+      '<img src="http://10.6.4.12:8080/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=UAV_Project:DTM 2022" alt="legend" width="70" height="150">';
   return div;
   };
   DTM_legend.addTo(map32);
