@@ -101,7 +101,7 @@
       {% include 'partials/_topbar.html'%}
 
       <div class="row featurette">
-        <div class="col-md-7" style="padding-left: 20px">
+        <div class="col-md-7 p-5">
           <!-- <h2 class="featurette-heading fw-normal lh-1">{{image_Multispectral.image_type}}</h2> -->
           <h2 class="featurette-heading fw-normal lh-1">{{DEM_DSM_24.name}}</h2>
           {% if DEM_DSM_24.description %}
@@ -168,7 +168,7 @@
             <p class="lead">You Don't have Description.</p>
           {% endif %}
         </div>
-        <div class="col-md-5">
+        <div class="col-md-5 p-5">
           <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg> -->
           <div
             id="mapL2"
@@ -216,7 +216,7 @@
       </div>
       <hr class="featurette-divider">
       <div class="row featurette">
-        <div class="col-md-7" style="padding-left: 20px">
+        <div class="col-md-7 p-5">
           <!-- <h2 class="featurette-heading fw-normal lh-1">{{image_Multispectral.image_type}}</h2> -->
           <h2 class="featurette-heading fw-normal lh-1">{{Hillshade_slope.name}}</h2>
           {% if Hillshade_slope.description %}
@@ -274,7 +274,7 @@
       <hr class="featurette-divider">
       <div id="views-container" class="container-fluid" style="height: 500px">
         <div id="lidar-comparison" class="row">
-          <div id="lidar-comparison-description" class="col-md-4">
+          <div id="lidar-comparison-description" class="col-md-4 p-5">
             <h2 class="featurette-heading fw-normal lh-1">
               {{liadr_c.name}}
             </h2>
